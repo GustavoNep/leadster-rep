@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import AnouButton from "../AnouButton";
+import AnnouLine from "../AnnouLine";
 
 const Container = styled.div`
   height: 550px;
@@ -10,7 +11,7 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
   width: 100%;
-  max-width: 746px;
+  max-width: 646px;
   margin: 0 auto;
 `;
 
@@ -33,7 +34,7 @@ const AnouTitle = styled.div`
   justify-content: center;
 
   h1 {
-    font-size: 90px;
+    font-size: 80px;
     background: linear-gradient(-45deg, #2c83fb, #1f76f0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -44,7 +45,10 @@ const AnouDesc = styled.div`
   display: flex;
   justify-content: center;
   font-size: 18.5px;
+  margin-top: 10px;
 `;
+
+
 
 export default function Annoucement() {
   return (
@@ -59,9 +63,10 @@ export default function Annoucement() {
         <AnouTitle>
           <h1>Mais Conversão</h1>
         </AnouTitle>
+        <AnnouLine />
         <AnouDesc>
           <p>
-            Conheça as estratégias que mudaram o jogo e como aplicá-las no seu
+            Conheça as estratégias que <b>mudarem o jogo</b> e como aplicá-las no seu
             negócio
           </p>
         </AnouDesc>
