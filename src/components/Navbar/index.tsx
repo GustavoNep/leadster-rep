@@ -1,4 +1,4 @@
-"use client";
+
 import Image from "next/image";
 import styled from "styled-components";
 import imgLogo from "../../assets/logo.png";
@@ -8,7 +8,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--dsc-color-bg-primary);
+  background-color: var(--dsc-color-card-bg);
 `;
 const Wrapper = styled.div``;
 
