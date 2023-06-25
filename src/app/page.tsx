@@ -1,8 +1,10 @@
+import Landing from "@/pages/Landing";
+
 
 export default function Home() {
   return (
     <main>
-      <h1>oi</h1>
+      <Landing />
     </main>
   )
 }
