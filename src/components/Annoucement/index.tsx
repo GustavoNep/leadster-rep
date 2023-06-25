@@ -44,7 +44,7 @@ const AnouTitle = styled.div`
 const AnouDesc = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 18.5px;
+  font-size: 17.2px;
   margin-top: 10px;
 `;
 
