@@ -43,8 +43,6 @@ export default function VideoCard({ onClick }: Props) {
     }
   };
 
-  
-
   return (
     <Container onClick={onClick ? handleClick : undefined} >
       <ImgCont>
