@@ -63,7 +63,7 @@ export default function Annoucement() {
         <AnouTitle>
           <h1>Mais Conversão</h1>
         </AnouTitle>
-        <AnnouLine />
+        <AnnouLine mgtop="0" mtbot="0"/>
         <AnouDesc>
           <p>
             Conheça as estratégias que <b>mudarem o jogo</b> e como aplicá-las no seu
