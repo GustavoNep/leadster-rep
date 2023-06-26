@@ -31,15 +31,22 @@ const ImageWrapper = styled(Image)`
   object-fit: cover;
 `;
 
-export default function VideoCard({ onClick }: any) {
+type Props = {
+    onClick: Function;
+}
+
+export default function VideoCard({ onClick }: Props) {
+
   const handleClick = () => {
     if (onClick) {
       onClick();
     }
   };
 
+  
+
   return (
-    <Container>
+    <Container onClick={onClick ? handleClick : undefined} >
       <ImgCont>
         <ImageWrapper src={thumbImg} alt="thumbLeadster" />
       </ImgCont>

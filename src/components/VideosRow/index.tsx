@@ -92,7 +92,6 @@ export default function VideosRow() {
         <VideoCard onClick={openModal} />
         <VideoCard onClick={openModal} />
       </Wrapper>
-
       <LineCont>
         <AnnouLine mgtop="30px" mtbot="0px" />
       </LineCont>
