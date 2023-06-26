@@ -3,9 +3,7 @@
 import React, { useState } from "react";
 import { useServerInsertedHTML } from "next/navigation";
 import { ServerStyleSheet, StyleSheetManager } from "styled-components";
-import createIsPropValid from "@emotion/is-prop-valid";
 
-const isThemePropValid = createIsPropValid("theme");
 
 export default function StyledComponentsRegistry({
   children,
@@ -27,7 +25,6 @@ export default function StyledComponentsRegistry({
   return (
     <StyleSheetManager
       sheet={styledComponentsStyleSheet.instance}
-      shouldForwardProp={isPropValid}
     >
       {children}
     </StyleSheetManager>

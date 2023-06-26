@@ -5,6 +5,7 @@ import Image from "next/image";
 const Container = styled.div`
   border-radius: 10px;
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 `;
 const ImgCont = styled.div`
   width: 100%;
@@ -13,14 +14,12 @@ const ImgCont = styled.div`
   position: relative;
 `;
 const DescCont = styled.div`
-
-    padding: 13px;
-    p {
-        font-size: 14px;
-        color: black;
-        font-weight: 700;
-        
-    }
+  padding: 13px;
+  p {
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+  }
 `;
 
 const ImageWrapper = styled(Image)`
@@ -32,7 +31,13 @@ const ImageWrapper = styled(Image)`
   object-fit: cover;
 `;
 
-export default function VideoCard() {
+export default function VideoCard({ onClick }: any) {
+  const handleClick = () => {
+    if (onClick) {
+      onClick();
+    }
+  };
+
   return (
     <Container>
       <ImgCont>

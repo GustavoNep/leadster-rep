@@ -16,7 +16,7 @@ const StyledSelect = styled.select`
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23333' d='M0 0h12L6 8'/%3E%3C/svg%3E"); /* Adiciona uma seta customizada */
   background-repeat: no-repeat;
   background-position: calc(100% - 8px) center; 
-  padding-right: 20px; 
+  padding-right: 30px; 
   font-weight: 700;
   color: var(--dsc-color-font-primary);
 `;
