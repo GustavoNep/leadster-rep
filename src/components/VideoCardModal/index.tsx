@@ -11,7 +11,8 @@ const ModalOverlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9999;
+  z-index: 1000;
+
 `;
 
 const ModalContent = styled.div`
@@ -27,12 +28,14 @@ const ModalContent = styled.div`
   width: 100%;
   max-height: 560px;
   overflow-y: auto;
+  z-index: 1001;
+  
 `;
 
 const VideoContainer = styled.div`
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; /* Proporção de aspecto 16:9 (ajuste conforme necessário) */
+  padding-bottom: 56.25%; 
   position: relative;
   overflow: hidden;
 `;
@@ -92,6 +95,7 @@ const DownStyle = styled.div`
 `
 
 export default function VideoCardModal({ onClose }: any) {
+  
   const videoId = "6-B-j7rkVFQ";
 
   return (

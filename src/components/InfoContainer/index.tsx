@@ -9,15 +9,9 @@ import starImg from "../../assets/rating.webp";
 
 const Container = styled.div`
   height: 550px;
-  position: relative;
-  overflow: hidden;
-  position: relative;
-  overflow: hidden;
-  z-index: -1;
-  background-color: rgba(240, 248, 255, 0.4);
+  background-color: rgba(240, 248, 255, 1);
 `;
 const Wrapper = styled.div`
-  position: relative;
   display: flex;
   gap: 50px;
   width: 100%;
@@ -25,24 +19,11 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-const Triangle = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #f0f8ff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  clip-path: polygon(0 0, 70% 50%, 20% 100%);
-  border-bottom-right-radius: 50%;
-  z-index: -1;
-`;
-
 const ImgCont = styled.div`
   flex: 1;
 `;
 const InfoCont = styled.div`
   margin-top: 13%;
-
   flex: 1;
   font-weight: none;
   h2 {
@@ -92,7 +73,6 @@ const CreditCont = styled.div`
 export default function InfoContainer() {
   return (
     <Container>
-      <Triangle />
       <Wrapper>
         <ImgCont>
           <ImageCont src={imgInfo} alt="/" />
