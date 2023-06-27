@@ -95,8 +95,8 @@ export default function VideoCardModal({ onClose }: any) {
   const videoId = "6-B-j7rkVFQ";
 
   return (
-    <ModalOverlay onClick={onClose}>
-      <ModalContent>
+    <ModalOverlay >
+      <ModalContent >
         <div>
           <TitleVideo>
             <CloseIcon>

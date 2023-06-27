@@ -1,4 +1,5 @@
 import Annoucement from "@/components/Annoucement";
+import InfoContainer from "@/components/InfoContainer";
 import Navbar from "@/components/Navbar";
 import VideosRow from "@/components/VideosRow";
 
@@ -8,6 +9,7 @@ export default function Landing() {
       <Navbar />
       <Annoucement />
       <VideosRow />
+      <InfoContainer />
     </>
   );
 }
