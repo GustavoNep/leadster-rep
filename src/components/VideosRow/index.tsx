@@ -6,6 +6,8 @@ import ButtonLead from "../Buttons/ButtonLead";
 import OrderButton from "../Buttons/OrderButton";
 import { useState } from "react";
 import VideoCardModal from "../VideoCardModal";
+import { videos } from "@/constants";
+import { Video } from "@/types/video";
 
 const Container = styled.div`
   height: 900px;
@@ -55,15 +57,22 @@ const ModalWrapper = styled.div`
 
 export default function VideosRow() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
-  const openModal = () => {
+  type Props = {
+    video: Video;
+  }
+
+  const openModal = ({video} : Props) => {
+    setSelectedVideo(video);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
+    setSelectedVideo(null);
     setIsModalOpen(false);
   };
-
+  
   return (
     <Container>
       <WrapItems>
@@ -82,15 +91,10 @@ export default function VideosRow() {
         <AnnouLine mgtop="15px" mtbot="30px" />
       </LineCont>
       <Wrapper>
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
-        <VideoCard onClick={openModal} />
+        {videos.map((video) => (
+          <VideoCard onClick={() => openModal({video})} title={video.title} key={video.id}/>
+        ))}
+        
       </Wrapper>
       <LineCont>
         <AnnouLine mgtop="30px" mtbot="0px" />
@@ -98,7 +102,7 @@ export default function VideosRow() {
       <Pagination />
       {isModalOpen && (
         <ModalWrapper>
-          <VideoCardModal onClose={closeModal} />
+          <VideoCardModal video={selectedVideo} onClose={closeModal} />
         </ModalWrapper>
       )}
     </Container>

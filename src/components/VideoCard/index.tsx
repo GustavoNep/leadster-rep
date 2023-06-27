@@ -2,6 +2,7 @@ import styled from "styled-components";
 import thumbImg from "../../assets/thumbnail.png";
 import Image from "next/image";
 
+
 const Container = styled.div`
   border-radius: 10px;
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
@@ -33,9 +34,10 @@ const ImageWrapper = styled(Image)`
 
 type Props = {
     onClick: Function;
+    title: String;
 }
 
-export default function VideoCard({ onClick }: Props) {
+export default function VideoCard({ onClick, title }: Props) {
 
   const handleClick = () => {
     if (onClick) {
@@ -49,7 +51,7 @@ export default function VideoCard({ onClick }: Props) {
         <ImageWrapper src={thumbImg} alt="thumbLeadster" />
       </ImgCont>
       <DescCont>
-        <p>Como aumentar sua Geração de Leads feat. Traktor</p>
+        <p>{title}</p>
       </DescCont>
     </Container>
   );

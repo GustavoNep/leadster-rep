@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { AiOutlineClose } from "react-icons/ai";
 import AnnouLine from "../AnnouLine";
 import CategoryButtons from "../Buttons/CategoryButtons";
+import { Video } from "@/types/video";
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -94,9 +95,14 @@ const DownStyle = styled.div`
     margin-top: 20px;
 `
 
-export default function VideoCardModal({ onClose }: any) {
-  
-  const videoId = "6-B-j7rkVFQ";
+type VideoCardModalProps = {
+  video: Video | null;
+  onClose: () => void;
+};
+
+export default function VideoCardModal({ video, onClose }: VideoCardModalProps) {
+
+  const videoId = video ? video.videoId : "";
 
   return (
     <ModalOverlay >
@@ -127,9 +133,7 @@ export default function VideoCardModal({ onClose }: any) {
             </DescCard>
             <DescriptCard>
               <p>
-                lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum
-                ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet
-                lorem ipsdum ior sit amet lorem ipsdum ior sit amet
+                {video ? video.description : ""}
               </p>
             </DescriptCard>
             <DownStyle>
