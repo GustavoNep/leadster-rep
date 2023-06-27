@@ -1,18 +1,15 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-    height: 500px;
-    background-color: black;
+  width: 100%;
+  height: 550px;
 `;
-const Wrapper = styled.div``;
 
 
 export default function Footer() {
-    return(
-        <Container>
-            <Wrapper>
-                footer
-            </Wrapper>
-        </Container>
-    )
+  return (
+    <Container>
+      footer
+    </Container>
+  );
 }

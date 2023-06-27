@@ -4,20 +4,39 @@ import imgInfo from "../../assets/corpo.png";
 import AnnouLine from "../AnnouLine";
 import InfoButton from "../Buttons/InfoButton";
 import seloImg from "../../assets/selo.png";
-import cardImg from '../../assets/nocard.webp'
-import starImg from '../../assets/rating.webp'
+import cardImg from "../../assets/nocard.webp";
+import starImg from "../../assets/rating.webp";
 
 const Container = styled.div`
   height: 550px;
-  background-color: var(--dsc-color-bg-primary);
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+  background-color: rgba(240, 248, 255, 0.4);
 `;
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   gap: 50px;
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
 `;
+
+const Triangle = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: #f0f8ff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  clip-path: polygon(0 0, 70% 50%, 20% 100%);
+  border-bottom-right-radius: 50%;
+  z-index: -1;
+`;
+
 const ImgCont = styled.div`
   flex: 1;
 `;
@@ -62,18 +81,18 @@ const ImageSelo = styled(Image)`
 `;
 
 const CreditCont = styled.div`
-    padding-top: 8px;
-    display: flex;
-    font-size: 10px;
-    align-items: center;
-    letter-spacing: 0.5px;
-    gap: 3px;
-`
-
+  padding-top: 8px;
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  letter-spacing: 0.5px;
+  gap: 3px;
+`;
 
 export default function InfoContainer() {
   return (
     <Container>
+      <Triangle />
       <Wrapper>
         <ImgCont>
           <ImageCont src={imgInfo} alt="/" />
@@ -94,9 +113,11 @@ export default function InfoContainer() {
             <ImageSelo src={seloImg} alt="/" />
           </ButtonDiv>
           <CreditCont>
-            <Image src={cardImg} alt="/" width={14}/>
-            <p><TextHigh>Não</TextHigh> é necessário Cartão de Crédito |</p>
-            <Image src={starImg} alt="/" width={70}/>
+            <Image src={cardImg} alt="/" width={14} />
+            <p>
+              <TextHigh>Não</TextHigh> é necessário Cartão de Crédito |
+            </p>
+            <Image src={starImg} alt="/" width={70} />
             <span>4.9/5 média de satisfação</span>
           </CreditCont>
         </InfoCont>
