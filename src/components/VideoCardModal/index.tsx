@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { AiOutlineClose } from "react-icons/ai";
 import AnnouLine from "../AnnouLine";
-import CategoryButtons from "../CategoryButtons";
+import CategoryButtons from "../Buttons/CategoryButtons";
 
 const ModalOverlay = styled.div`
   position: fixed;

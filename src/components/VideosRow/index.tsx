@@ -2,8 +2,8 @@ import styled from "styled-components";
 import VideoCard from "../VideoCard";
 import AnnouLine from "../AnnouLine";
 import Pagination from "../Pagination";
-import ButtonLead from "../ButtonLead";
-import OrderButton from "../OrderButton";
+import ButtonLead from "../Buttons/ButtonLead";
+import OrderButton from "../Buttons/OrderButton";
 import { useState } from "react";
 import VideoCardModal from "../VideoCardModal";
 

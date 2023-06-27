@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import AnouButton from "../AnouButton";
+import AnouButton from "../Buttons/AnouButton";
 import AnnouLine from "../AnnouLine";
 
 const Container = styled.div`
