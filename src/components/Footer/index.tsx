@@ -1,43 +1,77 @@
 import styled from "styled-components";
 import { listItems } from "@/constants";
+import Logo from "../../assets/logo.png";
+import Image from "next/image";
 
 const Container = styled.div`
   width: 100%;
-  height: 350px;
+  height: 400px;
 `;
 
 const ListContainer = styled.div`
-  flex-direction: column;
+  
   ul {
     list-style: none;
+  }
+  ul li {
+    cursor: pointer;
   }
 `;
 
 const ListTitle = styled.h3`
-  font-size: 16px;
+  font-size: 12px;
   font-weight: bold;
+  padding-bottom: 12px;
 `;
 
 const ListItem = styled.li`
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 4px;
+  margin-top: 18px;
 `;
 
 const ListWrapper = styled.div`
   display: flex;
-  margin-top: 50px;
-  gap: 30px;
+  gap: 8%;
+  justify-content: center;
+`;
+
+const LogoStyle = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const LogoText = styled.div`
+  display: flex;
+  justify-content: center;
+  p {
+    padding-top: 5px;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+  }
+`;
+const LogoContainer = styled.div`
+  padding: 45px 0;
+`;
+const EmailConta = styled.div`
+  font-size: 12px;
+  ul li {
+    margin-top: 18px;
+    cursor: pointer;
+  }
 `;
 
 export default function Footer() {
   return (
     <Container>
-      <div>
-        <div>Logo</div>
-        <div>
-          <p>Transformando visitantes em clientes</p>
-        </div>
-      </div>
+      <LogoContainer>
+        <LogoStyle>
+          <Image src={Logo} alt="" width={180} />
+        </LogoStyle>
+        <LogoText>
+          <p>Transformando visitantes em clientes.</p>
+        </LogoText>
+      </LogoContainer>
       <ListWrapper>
         {listItems.map((x, i) => (
           <ListContainer key={i}>
@@ -52,10 +86,12 @@ export default function Footer() {
         <ListContainer>
           <ListTitle>Siga a Leadster</ListTitle>
           <div>Icons</div>
-          <div>
-            <span>Email: contato@leadster.com.br</span>
-            <span>Telefone:(42)98828-9851</span>
-          </div>
+          <EmailConta>
+            <ul>
+              <li>Email: contato@leadster.com.br</li>
+              <li>Telefone:(42)98828-9851</li>
+            </ul>
+          </EmailConta>
         </ListContainer>
       </ListWrapper>
       <div></div>
