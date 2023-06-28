@@ -12,16 +12,19 @@ const Button = styled.button`
   font-weight: bold;
   cursor: pointer;
 `;
-
+const Wrapper = styled.div``
 const Icon = styled(AiOutlineDownload)`
   margin-right: 8px;
 `;
 
 export default function CategoryButtons() {
   return (
-    <Button>
-      <Icon />
-      <span>Spreadsheet.xls</span>
-    </Button>
+    <Wrapper>
+      <div></div>
+      <Button>
+        <Icon />
+        <span>Spreadsheet.xls</span>
+      </Button>
+    </Wrapper>
   );
 }

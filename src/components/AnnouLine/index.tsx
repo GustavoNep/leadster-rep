@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { StyleSheetManager } from "styled-components";
+import isPropValid from "@emotion/is-prop-valid";
 
 type Props = {
   mgtop: string;
@@ -12,5 +13,9 @@ const AnnouLin = styled.div<Props>`
 `;
 
 export default function AnnouLine({ mgtop, mtbot }: Props) {
-  return <AnnouLin mgtop={mgtop} mtbot={mtbot} />;
+  return (
+    <StyleSheetManager shouldForwardProp={isPropValid}>
+      <AnnouLin mgtop={mgtop} mtbot={mtbot} />
+    </StyleSheetManager>
+  );
 }
