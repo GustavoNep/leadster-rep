@@ -58,6 +58,8 @@ const CloseIcon = styled.div`
 
 const CardTitle = styled.div`
   display: flex;
+  max-width: 230px;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   h5 {
@@ -93,7 +95,9 @@ const DownStyle = styled.div`
   margin-top: 20px;
 `;
 const CategoryStyle = styled.div`
+  max-width: 440px;
   display: flex;
+  flex-wrap: wrap;
   gap: 2%;
 `;
 
@@ -118,8 +122,7 @@ export default function VideoCardModal({
             </CloseIcon>
             <CardTitle>
               <h5>
-                <HighlightedText>Webinar:</HighlightedText> Como aumentar sua
-                <br></br> Gerção de Leads feat. Traktor
+                <HighlightedText>Webinar:</HighlightedText> {video?.title}
               </h5>
             </CardTitle>
           </TitleVideo>
@@ -143,9 +146,10 @@ export default function VideoCardModal({
             </DownStyle>
             <AnnouLine mgtop="5px" mtbot="10px" />
             <CategoryStyle>
-              <CategoryButtons /> 
-              <CategoryButtons />
-            </CategoryStyle>
+              <CategoryButtons cateVideo={video} downloadIndex={0}/> 
+              <CategoryButtons cateVideo={video} downloadIndex={1}/>
+              <CategoryButtons cateVideo={video} downloadIndex={2}/>
+            </CategoryStyle >
           </InfoCont>
         </div>
       </ModalContent>

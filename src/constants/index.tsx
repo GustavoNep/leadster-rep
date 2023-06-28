@@ -27,7 +27,7 @@ export const videos = [
   {
     id: 1,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -49,7 +49,7 @@ export const videos = [
   {
     id: 2,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -70,7 +70,7 @@ export const videos = [
   },{
     id: 3,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -91,7 +91,7 @@ export const videos = [
   },{
     id: 4,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -112,7 +112,7 @@ export const videos = [
   },{
     id: 5,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -133,7 +133,7 @@ export const videos = [
   },{
     id: 6,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -154,7 +154,7 @@ export const videos = [
   },{
     id: 7,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -175,7 +175,7 @@ export const videos = [
   },{
     id: 8,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -196,7 +196,7 @@ export const videos = [
   },{
     id: 9,
     videoId: "6-B-j7rkVFQ",
-    title: "Webinar: Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
