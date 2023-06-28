@@ -1,12 +1,27 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
 import thumbImg from "../../assets/thumbnail.png";
 import Image from "next/image";
 
+const moveCard = keyframes`
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+`;
 
 const Container = styled.div`
   border-radius: 10px;
   box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  &:hover {
+    animation: ${moveCard} 0.5s ease-in-out;
+  }
 `;
 const ImgCont = styled.div`
   width: 100%;
