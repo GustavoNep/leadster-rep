@@ -13,7 +13,6 @@ const ModalOverlay = styled.div`
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-
 `;
 
 const ModalContent = styled.div`
@@ -30,13 +29,12 @@ const ModalContent = styled.div`
   max-height: 560px;
   overflow-y: auto;
   z-index: 1001;
-  
 `;
 
 const VideoContainer = styled.div`
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   position: relative;
   overflow: hidden;
 `;
@@ -70,7 +68,7 @@ const CardTitle = styled.div`
 const StyledCloseIcon = styled(AiOutlineClose)`
   font-size: 16px;
   cursor: pointer;
-  margin-right: 10px; 
+  margin-right: 10px;
   margin-top: 10px;
 `;
 
@@ -86,27 +84,33 @@ const InfoCont = styled.div`
   padding: 4% 5% 4% 5%;
 `;
 const DescriptCard = styled.div`
-    margin-top: 8px;
+  margin-top: 8px;
   p {
     font-size: 13px;
   }
 `;
 const DownStyle = styled.div`
-    margin-top: 20px;
-`
+  margin-top: 20px;
+`;
+const CategoryStyle = styled.div`
+  display: flex;
+  gap: 2%;
+`;
 
 type VideoCardModalProps = {
   video: Video | null;
   onClose: () => void;
 };
 
-export default function VideoCardModal({ video, onClose }: VideoCardModalProps) {
-
+export default function VideoCardModal({
+  video,
+  onClose,
+}: VideoCardModalProps) {
   const videoId = video ? video.videoId : "";
 
   return (
-    <ModalOverlay >
-      <ModalContent >
+    <ModalOverlay>
+      <ModalContent>
         <div>
           <TitleVideo>
             <CloseIcon>
@@ -132,15 +136,16 @@ export default function VideoCardModal({ video, onClose }: VideoCardModalProps) 
               <AnnouLine mgtop="5px" mtbot="0px" />
             </DescCard>
             <DescriptCard>
-              <p>
-                {video ? video.description : ""}
-              </p>
+              <p>{video ? video.description : ""}</p>
             </DescriptCard>
             <DownStyle>
               <h5>Downloads</h5>
             </DownStyle>
             <AnnouLine mgtop="5px" mtbot="10px" />
-            <div><CategoryButtons /></div>
+            <CategoryStyle>
+              <CategoryButtons /> 
+              <CategoryButtons />
+            </CategoryStyle>
           </InfoCont>
         </div>
       </ModalContent>

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import AnouButton from "../Buttons/AnouButton";
 import AnnouLine from "../AnnouLine";
-
+import Image from "next/image";
+import loadImg from '../../assets/asset-header.png'
 const Container = styled.div`
   height: 550px;
   background-color: var(--dsc-color-bg-primary);
@@ -32,12 +33,19 @@ const AnouText = styled.div`
 const AnouTitle = styled.div`
   display: flex;
   justify-content: center;
+  position: relative; 
 
   h1 {
     font-size: 80px;
     background: linear-gradient(-45deg, #2c83fb, #1f76f0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  img {
+    position: absolute; 
+    top: 12%; 
+    left: 98%; 
+    transform: translateX(-50%); 
   }
 `;
 
@@ -61,7 +69,7 @@ export default function Annoucement() {
           <h3>Menos Conversinha,</h3>
         </AnouText>
         <AnouTitle>
-          <h1>Mais Conversão</h1>
+          <h1>Mais Conversã <Image src={loadImg} alt="/" />o</h1>
         </AnouTitle>
         <AnnouLine mgtop="0" mtbot="0"/>
         <AnouDesc>

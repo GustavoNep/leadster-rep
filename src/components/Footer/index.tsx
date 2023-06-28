@@ -2,14 +2,22 @@ import styled from "styled-components";
 import { listItems } from "@/constants";
 import Logo from "../../assets/logo.png";
 import Image from "next/image";
+import ButtonSocial from "../Buttons/ButtonSocial";
 
 const Container = styled.div`
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   height: 400px;
 `;
-
+const ListContain = styled.div`
+  ul {
+    list-style: none;
+  }
+  ul li {
+  }
+`;
 const ListContainer = styled.div`
-  
   ul {
     list-style: none;
   }
@@ -32,7 +40,7 @@ const ListItem = styled.li`
 
 const ListWrapper = styled.div`
   display: flex;
-  gap: 8%;
+  gap: 10%;
   justify-content: center;
 `;
 
@@ -55,10 +63,15 @@ const LogoContainer = styled.div`
 `;
 const EmailConta = styled.div`
   font-size: 12px;
+
   ul li {
     margin-top: 18px;
-    cursor: pointer;
   }
+`;
+
+const SocialStyle = styled.div``;
+const HighInfo = styled.span`
+  color: #568899;
 `;
 
 export default function Footer() {
@@ -83,16 +96,22 @@ export default function Footer() {
             </ul>
           </ListContainer>
         ))}
-        <ListContainer>
+        <ListContain>
           <ListTitle>Siga a Leadster</ListTitle>
-          <div>Icons</div>
+          <SocialStyle>
+            <ButtonSocial />
+          </SocialStyle>
           <EmailConta>
             <ul>
-              <li>Email: contato@leadster.com.br</li>
-              <li>Telefone:(42)98828-9851</li>
+              <li>
+                Email: <HighInfo> contato@leadster.com.br</HighInfo>{" "}
+              </li>
+              <li>
+                Telefone: <HighInfo> (42)98828-9851</HighInfo>
+              </li>
             </ul>
           </EmailConta>
-        </ListContainer>
+        </ListContain>
       </ListWrapper>
       <div></div>
     </Container>
