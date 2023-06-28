@@ -3,13 +3,15 @@ import { listItems } from "@/constants";
 import Logo from "../../assets/logo.png";
 import Image from "next/image";
 import ButtonSocial from "../Buttons/ButtonSocial";
+import AnnouLine from "../AnnouLine";
 
 const Container = styled.div`
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  height: 400px;
+  height: 450px;
 `;
+
 const ListContain = styled.div`
   ul {
     list-style: none;
@@ -17,6 +19,7 @@ const ListContain = styled.div`
   ul li {
   }
 `;
+
 const ListContainer = styled.div`
   ul {
     list-style: none;
@@ -36,6 +39,7 @@ const ListItem = styled.li`
   font-size: 12px;
   margin-bottom: 4px;
   margin-top: 18px;
+  opacity: 0.5;
 `;
 
 const ListWrapper = styled.div`
@@ -58,12 +62,13 @@ const LogoText = styled.div`
     letter-spacing: 0.2px;
   }
 `;
+
 const LogoContainer = styled.div`
   padding: 45px 0;
 `;
+
 const EmailConta = styled.div`
   font-size: 12px;
-
   ul li {
     margin-top: 18px;
   }
@@ -72,6 +77,20 @@ const EmailConta = styled.div`
 const SocialStyle = styled.div``;
 const HighInfo = styled.span`
   color: #568899;
+`;
+
+const CopyrightContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #568899;
+  margin-top: 20px;
+  letter-spacing: 0.5px;
+`;
+
+const HighlightedText = styled.span`
+  color: #0084ff;
+  font-weight: bold;
 `;
 
 export default function Footer() {
@@ -104,16 +123,25 @@ export default function Footer() {
           <EmailConta>
             <ul>
               <li>
-                Email: <HighInfo> contato@leadster.com.br</HighInfo>{" "}
+                Email: <HighInfo>contato@leadster.com.br</HighInfo>{" "}
               </li>
               <li>
-                Telefone: <HighInfo> (42)98828-9851</HighInfo>
+                Telefone: <HighInfo>(42)98828-9851</HighInfo>
               </li>
             </ul>
           </EmailConta>
         </ListContain>
       </ListWrapper>
-      <div></div>
+
+      <AnnouLine mtbot="0" mgtop="75px" />
+
+      <CopyrightContainer>
+        <div>&copy; 2015-2022 Todos os direitos reservados |<HighlightedText> Leadster</HighlightedText> </div>
+        <div>
+          Rua José Loureiro, 464 - Centro - Curitiba Pr - CEP: 80010-000 |
+          Termos de uso
+        </div>
+      </CopyrightContainer>
     </Container>
   );
 }
