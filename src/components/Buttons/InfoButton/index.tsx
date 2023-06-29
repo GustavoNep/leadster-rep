@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Button = styled.button`
   background-color: #0083ff;
-  padding: 15px 25px;
+  padding: 11px 18px;
   border: none;
   transition: color 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
@@ -13,9 +13,11 @@ const Button = styled.button`
   &:hover {
     color: #ccdef1;
   }
-  font-size: 13px;
+  font-size: 0.6rem;
   &:active {
   }
+
+  
 `;
 type Props = {
     text: String;

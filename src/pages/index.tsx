@@ -12,7 +12,6 @@ export default function Index() {
         <Annoucement />
         <VideosRow />
         <InfoContainer />
-       
       </Layout>
     </>
   );

@@ -33,7 +33,6 @@ const LineCont = styled.div`
     max-width: 968px;
   } 
 `;
-
 const ButtonRow = styled.div`
   display: flex;
   justify-content: space-between;
@@ -46,7 +45,6 @@ const ButtonRow = styled.div`
     justify-content: flex-start;
   }
 `;
-
 const WrapItems = styled.div`
   display: flex;
   flex-direction: column;
@@ -63,17 +61,12 @@ const WrapItems = styled.div`
 
   @media (min-width: 1024px) {
     max-width: 968px;
-
   } 
-
- 
 `;
-
 const OrderStyle = styled.div`
   display: flex;
   align-items: center;
 `;
-
 const ModalWrapper = styled.div`
   position: fixed;
   top: 0;

@@ -56,13 +56,13 @@ const AnouTitle = styled.div`
 
   @media (min-width: 576px) {
     h1 {
-      font-size: 8vh;
+      font-size: 6vh;
     }
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: 10vh;
+      font-size: 8vh;
     }
   }
 `;
@@ -70,10 +70,13 @@ const AnouTitle = styled.div`
 const ImageLoad = styled(Image)`
   position: absolute;
   top: 10%;
-  left: 98.5%;
+  left: 99%;
   transform: translateX(-50%);
-  width: 10%;
-  height: 37%;
+  width: 8%;
+  height: 33%;
+  @media (min-width: 576px) {
+    left: 99%;
+  }
 `;
 
 const AnouDesc = styled.div`
@@ -85,13 +88,13 @@ const AnouDesc = styled.div`
   text-overflow: ellipsis;
   @media (min-width: 576px) {
     p {
-      font-size: 1.7vh;
+      font-size: 1.23vh;
     }
   }
 
   @media (min-width: 768px) {
     p {
-      font-size: 2.1vh;
+      font-size: 1.7vh;
     }
   }
 `;
