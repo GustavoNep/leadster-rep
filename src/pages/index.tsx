@@ -11,7 +11,7 @@ export default function Index() {
       <Layout>
         <Annoucement />
         <VideosRow />
-        <InfoContainer />
+       
       </Layout>
     </>
   );

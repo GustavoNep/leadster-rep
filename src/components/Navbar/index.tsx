@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import styled from "styled-components";
 import imgLogo from "../../assets/logo.png";
@@ -8,16 +7,23 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   background-color: var(--dsc-color-card-bg);
 `;
-const Wrapper = styled.div``;
 
+const Wrapper = styled.div` 
+`;
+
+const Logo = styled(Image)`
+  width: 130px;
+  height: 30px;
+`;
 
 export default function Navbar() {
   return (
     <Container>
       <Wrapper>
-        <Image src={imgLogo} alt="leadster logo" width={130} height={30} />
+        <Logo src={imgLogo} alt="leadster logo" />
       </Wrapper>
     </Container>
   );

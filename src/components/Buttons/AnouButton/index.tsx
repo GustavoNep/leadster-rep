@@ -1,24 +1,34 @@
 import styled from "styled-components";
-const ButtonDiv = styled.div`
+
+const Button = styled.button`
   border: solid 2px var(--dsc-color-btn-primary);
-  display: inline-block;
+  padding: 1px 5px;
+  color: var(--dsc-color-btn-primary);
+  background-color: transparent;
+  font-size: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
   white-space: nowrap;
-  padding: 5px 20px;
   border-radius: 30px;
   border-bottom-left-radius: 1px;
-  p {
-    font-size: 14px;
-    font-weight: 800;
-    color: var(--dsc-color-btn-primary);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--dsc-color-btn-primary);
+    color: var(--dsc-color-btn-inverse);
+  }
+
+  @media (min-width: 576px) {
+    font-size: 0.8rem;
+    padding: 5px 20px;
   }
 `;
 
-export default function AnouButton() {
+type Props = {
+  text: string;
+};
+
+export default function AnouButton({ text }: Props) {
   return (
-    <div>
-      <ButtonDiv>
-        <p>WEBINAR EXCLUSIVOS</p>
-      </ButtonDiv>
-    </div>
+    <Button>{text}</Button>
   );
 }

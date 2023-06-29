@@ -10,7 +10,7 @@ import { videos } from "@/constants";
 import { Video } from "@/types/video";
 
 const Container = styled.div`
-  height: 900px;
+  height: 100vh;
 `;
 const Wrapper = styled.div`
   padding: 10px;
@@ -21,6 +21,8 @@ const Wrapper = styled.div`
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+
+
 `;
 const LineCont = styled.div`
   width: 100%;
