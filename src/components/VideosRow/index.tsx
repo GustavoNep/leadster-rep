@@ -10,34 +10,63 @@ import { videos } from "@/constants";
 import { Video } from "@/types/video";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100%;
 `;
 const Wrapper = styled.div`
   padding: 10px;
   width: 100%;
-  max-width: 946px;
-  height: 700px;
+  max-width: 80%;
   margin: 0 auto;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  @media (min-width: 1024px) {
+    max-width: 968px;
 
-
+  } 
 `;
 const LineCont = styled.div`
   width: 100%;
-  max-width: 946px;
+  max-width: 80%;
   margin: 0 auto;
+  @media (min-width: 1024px) {
+    max-width: 968px;
+  } 
 `;
 
-const ButtonRow = styled.div``;
-const WrapItems = styled.div`
+const ButtonRow = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-bottom: 15px;
+
+  @media (min-width: 576px) {
+    justify-content: flex-start;
+  }
+`;
+
+const WrapItems = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  max-width: 946px;
+  max-width: 80%;
   margin: 0 auto;
-  margin-top: 70px;
+  padding-top: 50px;
+
+  @media (min-width: 576px) {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 968px;
+
+  } 
+
+ 
 `;
 
 const OrderStyle = styled.div`
@@ -63,9 +92,9 @@ export default function VideosRow() {
 
   type Props = {
     video: Video;
-  }
+  };
 
-  const openModal = ({video} : Props) => {
+  const openModal = ({ video }: Props) => {
     setSelectedVideo(video);
     setIsModalOpen(true);
   };
@@ -74,7 +103,7 @@ export default function VideosRow() {
     setSelectedVideo(null);
     setIsModalOpen(false);
   };
-  
+
   return (
     <Container>
       <WrapItems>
@@ -94,9 +123,12 @@ export default function VideosRow() {
       </LineCont>
       <Wrapper>
         {videos.map((video) => (
-          <VideoCard onClick={() => openModal({video})} title={video.title} key={video.id}/>
+          <VideoCard
+            onClick={() => openModal({ video })}
+            title={video.title}
+            key={video.id}
+          />
         ))}
-        
       </Wrapper>
       <LineCont>
         <AnnouLine mgtop="30px" mtbot="0px" />

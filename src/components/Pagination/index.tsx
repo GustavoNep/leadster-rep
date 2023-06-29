@@ -4,6 +4,7 @@ const PageStyle = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  padding-bottom: 30px;
   span {
     display: flex;
     align-items: center;
