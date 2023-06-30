@@ -17,4 +17,4 @@ Requisitos:
 - Node: v18.16.0
 - Yarn: 1.22.17
 
-![Leadster](Screenshot_1png)
+![Leadster](./Screenshot_1.png)
