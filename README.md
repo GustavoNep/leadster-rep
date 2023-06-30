@@ -16,3 +16,5 @@ Para rodar o projeto basta copiar estes arquivos para seu computador logo em seg
 Requisitos:
 - Node: v18.16.0
 - Yarn: 1.22.17
+
+![Leadster](Screenshot_1png)
