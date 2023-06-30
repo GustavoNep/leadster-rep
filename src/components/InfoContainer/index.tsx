@@ -26,10 +26,11 @@ const Wrapper = styled.div`
     max-width: 90%;
   }
   @media (min-width: 678px) {
+    max-width: 97%;
     flex-direction: row;
   }
   @media (min-width: 1200px) {
-    max-width: 1148px;
+    max-width: 1248px;
   }
 `;
 
@@ -46,10 +47,11 @@ const InfoCont = styled.div`
   padding-top: 4px;
 
   @media (min-width: 678px) {
-    padding-top: 10%;
+    padding-top: 8%;
   }
   @media (min-width: 1024px) {
-    padding-top: 14%;
+    
+    
   }
 `;
 const ImageCont = styled(Image)`
@@ -72,17 +74,18 @@ const TextHigh = styled.span`
   font-weight: 700;
 `;
 const LineLimit = styled.div`
-  max-width: 90%;
+  max-width: 77%;
   margin: 0 auto;
   @media (min-width: 576px) {
     max-width: 80%;
   }
   @media (min-width: 678px) {
-    max-width: 70%;
+    max-width: 79%;
   }
   @media (min-width: 1024px) {
-    
+    max-width: 85%;
   } 
+  
 `;
 const ButtonDiv = styled.div`
   display: flex;
@@ -90,11 +93,19 @@ const ButtonDiv = styled.div`
   display: flex;
   max-width: 80%;
   margin: 0 auto;
-  gap: 10%;
+  gap: 4%;
   justify-content: center;
+  @media (min-width: 576px) {
+    max-width: 80%;
+    justify-content: center;
+  }
+  @media (min-width: 678px) {
+    max-width: 95%;
+  }
   @media (min-width: 1024px) {
     justify-content: flex-start;
-    max-width: 70%;
+    max-width: 85%;
+    padding-top: 16px;
   } 
   
 `;
@@ -106,22 +117,38 @@ const ImageSelo = styled(Image)`
   @media (min-width: 1024px) {
     width: 36%;
   } 
+  @media (min-width: 1200px) {
+    width: 28%;
+  } 
 `;
 
 const CreditCont = styled.div`
   padding-top: 14px;
   display: flex;
-  font-size: 0.3rem;
+  font-size: 0.24rem;
   justify-content: center;
   align-items: center;
-  gap: 1.5%;
+  gap: 2%;
+  font-weight: 400;
   max-width: 80%;
   margin: 0 auto;
   justify-content: center;
+  @media (min-width: 678px) {
+    justify-content: center;
+    max-width: 90%;
+    font-size: 0.33rem;
+  }
   @media (min-width: 1024px) {
-    justify-content: flex-start;
-    max-width: 70%;
-    font-size: 0.5rem;
+    max-width: 90%;
+    padding-top: 20px;
+    font-size: 0.65rem;
+  } 
+  @media (min-width: 1200px) {
+    max-width: 100%;
+    padding-top: 30px;
+    font-size: 0.96rem;
+    padding-left: 8%;
+    
   } 
   
 `;
@@ -133,14 +160,20 @@ const TitleCont = styled.div`
     color: #1c3c50;
     font-weight: normal;
   }
+
+  @media (min-width: 576px) {
+    justify-content: center;
+  }
   @media (min-width: 678px) {
+    justify-content: flex-start;
     h2 {
       font-size: 2vw;
+      
     }
   }
   @media (min-width: 1024px) {
     h2 {
-      font-size: 1.7rem;
+      font-size: 2.3rem;
     }
   }
 `;
@@ -148,16 +181,28 @@ const DescCont = styled.div`
   display: flex;
   font-size: 3vw;
   padding-top: 3px;
+  @media (min-width: 576px) {
+    justify-content: center;
+  }
   @media (min-width: 678px) {
     font-size: 2vw;
+    justify-content: flex-start;
   }
   @media (min-width: 1024px) {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding-top: 5%;
   }
 `;
 const TitleDesc = styled.div`
+
   max-width: 70%;
   margin: 0 auto;
+  @media (min-width: 678px) {
+    max-width: 78%;
+  }
+  @media (min-width: 1024px) {
+    max-width: 85%;
+  }
 `;
 
 export default function InfoContainer() {
@@ -182,7 +227,7 @@ export default function InfoContainer() {
             </DescCont>
           </TitleDesc>
           <LineLimit>
-            <AnnouLine mgtop="15px" mtbot="15px" />
+            <AnnouLine mgtop="20px" mtbot="15px" />
           </LineLimit>
           <ButtonDiv>
             <InfoButton text="VER DEMONSTRAÇÃO" />

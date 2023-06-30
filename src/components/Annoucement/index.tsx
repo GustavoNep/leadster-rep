@@ -5,12 +5,15 @@ import Image from "next/image";
 import loadImg from "../../assets/asset-header.png";
 
 const Container = styled.div`
-  height: 70vh;
+  height: 30vh;
   background-color: var(--dsc-color-bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  @media (min-width: 576px) {
+    height: 70vh;
+  }
 `;
 const Wrapper = styled.div`
   max-width: 100%;
@@ -32,13 +35,24 @@ const AnouText = styled.div`
 
   @media (min-width: 576px) {
     h3 {
-      font-size: 4vh;
+      font-size: 2.5vh;
     }
   }
 
   @media (min-width: 768px) {
     h3 {
-      font-size: 5vh;
+      font-size: 3vh;
+    }
+  }
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 4vh;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    h3 {
+      font-size: 6vh;
     }
   }
 `;
@@ -56,13 +70,23 @@ const AnouTitle = styled.div`
 
   @media (min-width: 576px) {
     h1 {
-      font-size: 6vh;
+      font-size: 4vh;
     }
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: 8vh;
+      font-size: 5.5vh;
+    }
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 7vh;
+    }
+  }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 9vh;
     }
   }
 `;
@@ -88,13 +112,24 @@ const AnouDesc = styled.div`
   text-overflow: ellipsis;
   @media (min-width: 576px) {
     p {
-      font-size: 1.23vh;
+      font-size: 0.81vh;
     }
   }
 
   @media (min-width: 768px) {
     p {
-      font-size: 1.7vh;
+      font-size: 1.1vh;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      font-size: 1.4vh;
+    }
+  }
+  @media (min-width: 1200px) {
+    p {
+      font-size: 1.8vh;
     }
   }
 `;

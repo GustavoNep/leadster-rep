@@ -46,11 +46,22 @@ const ListItem = styled.li`
 
 const ListWrapper = styled.div`
   display: flex;
-  gap: 10%;
-  justify-content: center;
+  padding: 10px;
   flex-direction: column;
-  max-width: 60%;
-  margin: 0 auto;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+  }
+  @media (min-width: 1200px) {
+    gap: 12%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
 `;
 
 const LogoStyle = styled.div`
@@ -69,7 +80,7 @@ const LogoText = styled.div`
 `;
 
 const LogoContainer = styled.div`
-  padding: 45px 0;
+  padding: 40px 0;
 `;
 
 const EmailConta = styled.div`
@@ -86,7 +97,6 @@ const HighInfo = styled.span`
 
 const CopyrightContainer = styled.div`
   display: flex;
-  justify-content: space-between;
   font-size: 0.5rem;
   color: #568899;
   padding-top: 15px;
@@ -95,8 +105,31 @@ const CopyrightContainer = styled.div`
   flex-direction: column;
   align-items: center;
   p {
-    margin-top: 10px;
     font-size: 0.4rem;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    max-width: 920px;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    p {
+      font-size: 0.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1000px;
+    font-size: 0.7rem;
+    p {
+      font-size: 0.6rem;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1120px;
+    
   }
 `;
 
@@ -106,11 +139,18 @@ const HighlightedText = styled.span`
 `;
 
 const LineLimit = styled.div`
-  max-width: 75%;
+  max-width: 100%;
   margin: 0 auto;
-`
+`;
 
 export default function Footer() {
+  const handleHomeClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <Container>
       <LogoContainer>
@@ -127,7 +167,9 @@ export default function Footer() {
             <ListTitle>{x.title}</ListTitle>
             <ul>
               {x.items.map((Items) => (
-                <ListItem key={Items}>{Items}</ListItem>
+                <ListItem key={Items} onClick={handleHomeClick}>
+                  {Items}
+                </ListItem>
               ))}
             </ul>
           </ListContainer>
@@ -159,10 +201,10 @@ export default function Footer() {
           &copy; 2015-2022 Todos os direitos reservados |
           <HighlightedText> Leadster</HighlightedText>{" "}
         </div>
-        <div>
-          <p>Rua José Loureiro, 464 - Centro - Curitiba Pr - CEP: 80010-000 |
-          Termos de uso</p>
-        </div>
+        <p>
+          Rua José Loureiro, 464 - Centro - Curitiba Pr - CEP: 80010-000 |
+          Termos de uso
+        </p>
       </CopyrightContainer>
     </Container>
   );
