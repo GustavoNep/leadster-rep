@@ -10,12 +10,17 @@ const Button = styled.button`
   font-weight: 600;
   color: white;
   text-align: center;
+
   &:hover {
     color: #ccdef1;
   }
-  font-size: 0.6rem;
+  font-size: 0.5rem;
   &:active {
   }
+  @media (min-width: 1024px) {
+    padding: 14px 24px;
+    font-size: 0.7rem;
+  } 
 
   
 `;

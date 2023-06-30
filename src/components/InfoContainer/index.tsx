@@ -29,7 +29,7 @@ const Wrapper = styled.div`
     flex-direction: row;
   }
   @media (min-width: 1200px) {
-    max-width: 968px;
+    max-width: 1148px;
   }
 `;
 
@@ -48,7 +48,7 @@ const InfoCont = styled.div`
   @media (min-width: 678px) {
     padding-top: 10%;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     padding-top: 14%;
   }
 `;
@@ -74,30 +74,56 @@ const TextHigh = styled.span`
 const LineLimit = styled.div`
   max-width: 90%;
   margin: 0 auto;
+  @media (min-width: 576px) {
+    max-width: 80%;
+  }
+  @media (min-width: 678px) {
+    max-width: 70%;
+  }
+  @media (min-width: 1024px) {
+    
+  } 
 `;
 const ButtonDiv = styled.div`
   display: flex;
   align-items: center;
   display: flex;
-  max-width: 71%;
+  max-width: 80%;
   margin: 0 auto;
   gap: 10%;
-
+  justify-content: center;
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+    max-width: 70%;
+  } 
+  
 `;
 
 const ImageSelo = styled(Image)`
   width: 30%;
   height: 45%;
   object-fit: contain;
+  @media (min-width: 1024px) {
+    width: 36%;
+  } 
 `;
 
 const CreditCont = styled.div`
   padding-top: 14px;
   display: flex;
-  font-size: 0.6rem;
+  font-size: 0.3rem;
   justify-content: center;
   align-items: center;
   gap: 1.5%;
+  max-width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  @media (min-width: 1024px) {
+    justify-content: flex-start;
+    max-width: 70%;
+    font-size: 0.5rem;
+  } 
+  
 `;
 
 const TitleCont = styled.div`
@@ -112,7 +138,7 @@ const TitleCont = styled.div`
       font-size: 2vw;
     }
   }
-  @media (min-width: 1200px) {
+  @media (min-width: 1024px) {
     h2 {
       font-size: 1.7rem;
     }
@@ -125,8 +151,8 @@ const DescCont = styled.div`
   @media (min-width: 678px) {
     font-size: 2vw;
   }
-  @media (min-width: 1200px) {
-    font-size: 1.3rem;
+  @media (min-width: 1024px) {
+    font-size: 1rem;
   }
 `;
 const TitleDesc = styled.div`
