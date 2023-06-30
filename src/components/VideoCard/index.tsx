@@ -8,7 +8,7 @@ const moveCard = keyframes`
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(5px, 0);
+    transform: translate(3px, 0);
   }
   100% {
     transform: translate(0, 0);

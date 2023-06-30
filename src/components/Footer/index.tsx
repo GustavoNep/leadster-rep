@@ -7,8 +7,6 @@ import AnnouLine from "../AnnouLine";
 
 const Container = styled.div`
   width: 100%;
-  //max-width: 1100px;
-  //margin: 0 auto;
   height: 70vh;
   height: 100%;
 `;
@@ -150,6 +148,9 @@ export default function Footer() {
       behavior: "smooth",
     });
   };
+
+  
+  
 
   return (
     <Container>

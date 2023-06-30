@@ -3,6 +3,28 @@ import AnouButton from "../Buttons/AnouButton";
 import AnnouLine from "../AnnouLine";
 import Image from "next/image";
 import loadImg from "../../assets/asset-header.png";
+import { keyframes } from "styled-components";
+
+const slideInAnimation = keyframes`
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+const fadeInAnimation = keyframes`
+  from {
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 
 const Container = styled.div`
   height: 30vh;
@@ -18,6 +40,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
+  animation: ${slideInAnimation} 0.5s ease-in-out;
 `;
 
 const AnouStyle = styled.div`
@@ -86,7 +109,7 @@ const AnouTitle = styled.div`
   }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 9vh;
+      font-size: 10vh;
     }
   }
 `;
@@ -98,6 +121,8 @@ const ImageLoad = styled(Image)`
   transform: translateX(-50%);
   width: 8%;
   height: 33%;
+  animation: ${fadeInAnimation} 1s ease-in-out;
+
   @media (min-width: 576px) {
     left: 99%;
   }
@@ -129,7 +154,7 @@ const AnouDesc = styled.div`
   }
   @media (min-width: 1200px) {
     p {
-      font-size: 1.8vh;
+      font-size: 2vh;
     }
   }
 `;

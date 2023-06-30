@@ -1,5 +1,17 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+
+const growAnimation = keyframes`
+  from {
+    transform: scale(1);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  to {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+`;
+
 
 const ButtonSocialContainer = styled.div`
   display: flex;
@@ -18,6 +30,11 @@ const SocialIcon = styled.div`
   align-items: center;
   margin-right: 15px;
   cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    animation: ${growAnimation} 0.6s forwards;
+  }
 
   svg {
     color: #fff;
