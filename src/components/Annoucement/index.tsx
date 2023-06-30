@@ -25,7 +25,6 @@ const fadeInAnimation = keyframes`
   }
 `;
 
-
 const Container = styled.div`
   height: 30vh;
   background-color: var(--dsc-color-bg-primary);
