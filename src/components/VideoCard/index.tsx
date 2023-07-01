@@ -1,5 +1,4 @@
 import styled, { keyframes } from "styled-components";
-
 import thumbImg from "../../assets/thumbnail.png";
 import Image from "next/image";
 

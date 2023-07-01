@@ -74,7 +74,7 @@ const TextHigh = styled.span`
   font-weight: 700;
 `;
 const LineLimit = styled.div`
-  max-width: 77%;
+  max-width: 78%;
   margin: 0 auto;
   @media (min-width: 576px) {
     max-width: 80%;
@@ -90,7 +90,6 @@ const LineLimit = styled.div`
 const ButtonDiv = styled.div`
   display: flex;
   align-items: center;
-  display: flex;
   max-width: 80%;
   margin: 0 auto;
   gap: 4%;
@@ -100,7 +99,8 @@ const ButtonDiv = styled.div`
     justify-content: center;
   }
   @media (min-width: 678px) {
-    max-width: 95%;
+    max-width: 80%;
+    justify-content: flex-start;
   }
   @media (min-width: 1024px) {
     justify-content: flex-start;
@@ -134,27 +134,28 @@ const CreditCont = styled.div`
   margin: 0 auto;
   justify-content: center;
   @media (min-width: 678px) {
-    justify-content: center;
-    max-width: 90%;
-    font-size: 0.33rem;
+    justify-content: flex-start;
+    max-width: 80%;
+    font-size: 0.35rem;
   }
   @media (min-width: 1024px) {
     max-width: 90%;
     padding-top: 20px;
     font-size: 0.65rem;
+    padding-left: 4%;
   } 
   @media (min-width: 1200px) {
-    max-width: 100%;
-    padding-top: 30px;
-    font-size: 0.96rem;
-    padding-left: 8%;
+    max-width: 92%;
+    margin-top: 12px;
+    font-size: 0.81rem;
+    padding-left: 4%;
     
   } 
-  
 `;
 
 const TitleCont = styled.div`
   display: flex;
+  justify-content: center;
   h2 {
     font-size: 4vw;
     color: #1c3c50;
@@ -181,6 +182,7 @@ const DescCont = styled.div`
   display: flex;
   font-size: 3vw;
   padding-top: 3px;
+  justify-content: center;
   @media (min-width: 576px) {
     justify-content: center;
   }

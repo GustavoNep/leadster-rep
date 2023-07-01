@@ -149,9 +149,6 @@ export default function Footer() {
     });
   };
 
-  
-  
-
   return (
     <Container>
       <LogoContainer>
