@@ -8,7 +8,7 @@ O projeto era criar uma Landing usando Next Js e Styled components. Foi nos dado
 
 A principio tive que tratar os erros de compatibilidade do Styled Components com Next Js. 
 O Código foi organizado em algumas pastas principais como Components sendo a pasta que guarda todos components principais da minha página de landing. Também criei uma pasta chamada pages que utiliza as Rotas do proprio next pra navegar entre elas. Criei um component Layout para guardar minha navbar e footer caso seja necessária utilizar em outras páginas.
-Utilizei Typescript para fazer o código tipado e criei um arquivo de Types que descreve o tipo do objetio que seria os "Videos" listados, na outra pasta contants eu pude guardar esses objetos que estão sendo imprimidos dinâmicamente nos meus components de CardModel e VideoRow no código, caso mude algo nas constants mudará automaticamente nos componentes também.
+Utilizei Typescript para fazer o código tipado e criei um arquivo de Types que descreve o tipo do objeto que seria os "Videos" listados, na outra pasta contants eu pude guardar esses objetos que estão sendo imprimidos dinâmicamente nos meus components de CardModel e VideoRow no código, caso mude algo nas constants mudará automaticamente nos componentes também.
 
 ## Como Rodar ? 
 
