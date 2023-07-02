@@ -5,7 +5,7 @@ const Button = styled.button`
   padding: 1px 5px;
   color: var(--dsc-color-btn-primary);
   background-color: transparent;
-  font-size: 0.5rem;
+  font-size: 0.44rem;
   font-weight: bold;
   transition: background-color 0.3s ease;
   white-space: nowrap;
@@ -18,8 +18,17 @@ const Button = styled.button`
   }
 
   @media (min-width: 576px) {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     padding: 5px 20px;
+  }
+  @media (min-width: 768px) {
+    font-size: 0.63rem;
+  }
+  @media (min-width: 1024px) {
+    font-size: 0.75rem;
+  }
+  @media (min-width: 1200px) {
+    font-size: 0.9rem;
   }
 `;
 

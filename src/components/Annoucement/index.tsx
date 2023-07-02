@@ -57,18 +57,18 @@ const AnouText = styled.div`
 
   @media (min-width: 576px) {
     h3 {
-      font-size: 2.5vh;
+      font-size: 3.5vh;
     }
   }
 
   @media (min-width: 768px) {
     h3 {
-      font-size: 3vh;
+      font-size: 4vh;
     }
   }
   @media (min-width: 1024px) {
     h3 {
-      font-size: 4vh;
+      font-size: 5vh;
     }
   }
 
@@ -92,23 +92,23 @@ const AnouTitle = styled.div`
 
   @media (min-width: 576px) {
     h1 {
-      font-size: 4vh;
+      font-size: 8vh;
     }
   }
 
   @media (min-width: 768px) {
     h1 {
-      font-size: 5.5vh;
+      font-size: 9vh;
     }
   }
   @media (min-width: 1024px) {
     h1 {
-      font-size: 7vh;
+      font-size: 9.8vh;
     }
   }
   @media (min-width: 1200px) {
     h1 {
-      font-size: 10vh;
+      font-size: 12vh;
     }
   }
 `;
@@ -136,24 +136,24 @@ const AnouDesc = styled.div`
   text-overflow: ellipsis;
   @media (min-width: 576px) {
     p {
-      font-size: 0.81vh;
+      font-size: 1.62vh;
     }
   }
 
   @media (min-width: 768px) {
     p {
-      font-size: 1.1vh;
+      font-size: 1.82vh;
     }
   }
 
   @media (min-width: 1024px) {
     p {
-      font-size: 1.4vh;
+      font-size: 1.98vh;
     }
   }
   @media (min-width: 1200px) {
     p {
-      font-size: 2vh;
+      font-size: 2.45vh;
     }
   }
 `;

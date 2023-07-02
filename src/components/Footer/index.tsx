@@ -142,6 +142,7 @@ const LineLimit = styled.div`
 `;
 
 export default function Footer() {
+  
   const handleHomeClick = () => {
     window.scrollTo({
       top: 0,

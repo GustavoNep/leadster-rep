@@ -164,6 +164,7 @@ const TitleCont = styled.div`
 
   @media (min-width: 576px) {
     justify-content: center;
+
   }
   @media (min-width: 678px) {
     justify-content: flex-start;
