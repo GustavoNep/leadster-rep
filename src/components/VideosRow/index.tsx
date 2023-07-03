@@ -4,10 +4,12 @@ import AnnouLine from "../AnnouLine";
 import Pagination from "../Pagination";
 import ButtonLead from "../Buttons/ButtonLead";
 import OrderButton from "../Buttons/OrderButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VideoCardModal from "../VideoCardModal";
 import { videos } from "@/constants";
 import { Video } from "@/types/video";
+import Link from "next/link";
+
 
 const Container = styled.div`
   height: 100%;
@@ -22,8 +24,7 @@ const Wrapper = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   @media (min-width: 1024px) {
     max-width: 968px;
-
-  } 
+  }
 `;
 const LineCont = styled.div`
   width: 100%;
@@ -31,7 +32,7 @@ const LineCont = styled.div`
   margin: 0 auto;
   @media (min-width: 1024px) {
     max-width: 968px;
-  } 
+  }
 `;
 const ButtonRow = styled.div`
   display: flex;
@@ -61,7 +62,7 @@ const WrapItems = styled.div`
 
   @media (min-width: 1024px) {
     max-width: 968px;
-  } 
+  }
 `;
 const OrderStyle = styled.div`
   display: flex;
@@ -83,6 +84,7 @@ export default function VideosRow() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
+
   type Props = {
     video: Video;
   };
@@ -102,7 +104,9 @@ export default function VideosRow() {
       <WrapItems>
         <ButtonRow>
           <ButtonLead text="Agências" />
-          <ButtonLead text="Chatbot" />
+          <Link href="/chatbot">
+            <ButtonLead text="Chatbot"/>
+          </Link>
           <ButtonLead text="Marketing Digital" />
           <ButtonLead text="Geração de Leads" />
           <ButtonLead text="Mídia Page" />
