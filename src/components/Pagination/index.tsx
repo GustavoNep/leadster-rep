@@ -12,8 +12,9 @@ const PageStyle = styled.div`
     font-weight: 700;
     margin-right: 2px;
   }
+`;
 
-  .pagination-item {
+const PageItem = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -33,15 +34,38 @@ const PageStyle = styled.div`
   }
 `;
 
-export default function Pagination() {
+type PaginationProps = {
+  totalPages: number;
+  currentPage: number;
+  onPageChange: (pageNumber: number) => void;
+};
+
+export default function Pagination({
+  totalPages,
+  currentPage,
+  onPageChange,
+}: PaginationProps) {
+
+  
+  const handlePageClick = (pageNumber: number) => {
+    if (pageNumber !== currentPage) {
+      onPageChange(pageNumber);
+    }
+  };
+
   return (
     <PageStyle>
       <span>Página</span>
       <div className="pagination">
-        <div className="pagination-item">1</div>
-        <div className="pagination-item">2</div>
-        <div className="pagination-item">3</div>
-        <div className="pagination-item">4</div>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <PageItem
+            className={currentPage === index + 1 ? "active" : ""}
+            key={index + 1}
+            onClick={() => handlePageClick(index + 1)}
+          >
+            {index + 1}
+          </PageItem>
+        ))}
       </div>
     </PageStyle>
   );

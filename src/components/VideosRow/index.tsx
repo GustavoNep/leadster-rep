@@ -84,11 +84,26 @@ const ModalWrapper = styled.div`
   justify-content: center;
 `;
 
+const ITEMS_PER_PAGE = 9;
+
 export default function VideosRow() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
   const { activeButton, setActiveButton} = useContext(ButtonStateContext);
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const videosPerPage = videos.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  );
+
+  const totalPages = Math.ceil(videos.length / ITEMS_PER_PAGE);
 
   type Props = {
     video: Video;
@@ -103,6 +118,7 @@ export default function VideosRow() {
     setSelectedVideo(null);
     setIsModalOpen(false);
   };
+
 
   return (
     <Container>
@@ -132,7 +148,7 @@ export default function VideosRow() {
         <AnnouLine mgtop="15px" mtbot="30px" />
       </LineCont>
       <Wrapper>
-        {videos.map((video) => (
+        {videosPerPage.map((video) => (
           <VideoCard
             onClick={() => openModal({ video })}
             title={video.title}
@@ -143,7 +159,11 @@ export default function VideosRow() {
       <LineCont>
         <AnnouLine mgtop="30px" mtbot="0px" />
       </LineCont>
-      <Pagination />
+      <Pagination 
+        totalPages={totalPages}
+        currentPage={currentPage}
+        onPageChange={handlePageChange}
+      />
       {isModalOpen && (
         <ModalWrapper>
           <VideoCardModal video={selectedVideo} onClose={closeModal} />
