@@ -2,7 +2,7 @@ import styled from "styled-components";
 import AnouButton from "../Buttons/AnouButton";
 import AnnouLine from "../AnnouLine";
 import Image from "next/image";
-import loadImg from "../../assets/asset-header.png";
+import loadImg from "../../../public/asset-header.png";
 import { keyframes } from "styled-components";
 import Link from "next/link";
 

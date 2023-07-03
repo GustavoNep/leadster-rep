@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import thumbImg from "../../assets/thumbnail.png";
+import thumbImg from "../../../public/thumbnail.png";
 import Image from "next/image";
 
 const moveCard = keyframes`

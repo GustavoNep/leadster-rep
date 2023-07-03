@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { listItems } from "@/constants";
-import Logo from "../../assets/logo.png";
+import Logo from "../../../public/logo.png";
 import Image from "next/image";
 import ButtonSocial from "../Buttons/ButtonSocial";
 import AnnouLine from "../AnnouLine";

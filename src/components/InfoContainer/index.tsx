@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styled from "styled-components";
-import imgInfo from "../../assets/corpo.png";
+import imgInfo from "../../../public/corpo.png";
 import AnnouLine from "../AnnouLine";
 import InfoButton from "../Buttons/InfoButton";
-import seloImg from "../../assets/selo.png";
-import cardImg from "../../assets/nocard.webp";
-import starImg from "../../assets/rating.webp";
+import seloImg from "../../../public/selo.png";
+import cardImg from "../../../public/nocard.webp";
+import starImg from "../../../public/rating.webp";
 import Link from "next/link";
 
 const Container = styled.div`

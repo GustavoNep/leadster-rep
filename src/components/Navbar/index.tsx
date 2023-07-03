@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styled from "styled-components";
-import imgLogo from "../../assets/logo.png";
+import imgLogo from '../../../public/logo.png';
 
 const Container = styled.div`
   height: 70px;
