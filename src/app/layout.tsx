@@ -1,7 +1,7 @@
+
+import ButtonStateProvider from "./ButtonStateContext";
 import "./globals.css";
 import StyledComponentsRegistry from "./registry";
-
-
 
 export const metadata = {
   title: "Leadster",
@@ -15,9 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body suppressHydrationWarning={true} >
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      <body suppressHydrationWarning={true}>
+        <StyledComponentsRegistry>
+          <ButtonStateProvider>{children}</ButtonStateProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
-  )
+  );
 }

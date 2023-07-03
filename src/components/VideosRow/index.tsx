@@ -9,6 +9,8 @@ import VideoCardModal from "../VideoCardModal";
 import { videos } from "@/constants";
 import { Video } from "@/types/video";
 import Link from "next/link";
+import { useContext } from "react";
+import ButtonStateProvider, { ButtonStateContext } from '../../app/ButtonStateContext';
 
 
 const Container = styled.div`
@@ -86,6 +88,7 @@ export default function VideosRow() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
+  const { activeButton, setActiveButton} = useContext(ButtonStateContext);
 
   type Props = {
     video: Video;
@@ -105,13 +108,21 @@ export default function VideosRow() {
     <Container>
       <WrapItems>
         <ButtonRow>
-          <ButtonLead text="Agências" />
-          <Link href="/chatbot">
-            <ButtonLead text="Chatbot"/>
+          <Link href='/agencia'>
+            <ButtonLead text="Agências" onClick={() => setActiveButton('agencia')} active={activeButton === 'agencia'}/>
           </Link>
-          <ButtonLead text="Marketing Digital" />
-          <ButtonLead text="Geração de Leads" />
-          <ButtonLead text="Mídia Page" />
+          <Link href="/chatbot">
+            <ButtonLead text="Chatbot" onClick={() => setActiveButton('chatbot')} active={activeButton === 'chatbot'}/>
+          </Link>
+          <Link href='/marketing'>
+            <ButtonLead text="Marketing Digital" onClick={() => setActiveButton('marketing')} active={activeButton === 'marketing'}/>
+          </Link>
+          <Link href='/'>
+            <ButtonLead text="Geração de Leads" onClick={() => setActiveButton('Geração de Leads')} active={activeButton === 'Geração de Leads'}/>
+          </Link>
+          <Link href='/midia'>
+            <ButtonLead text="Mídia Page" onClick={() => setActiveButton('midia')} active={activeButton === 'midia'}/>
+          </Link>
         </ButtonRow>
         <OrderStyle>
           <OrderButton />

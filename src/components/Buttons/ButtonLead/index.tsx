@@ -13,19 +13,31 @@ const Button = styled.button`
   font-weight: 600;
   color: var(--dsc-color-font-primary);
   text-align: center;
-
+  font-size: 13px;
   &:hover {
     color: #2c83fb;
     border-color: #2c83fb;
   }
+  ${(props) =>
+    props.active &&
+    css`
+      background-color: #2c83fb;
+      color: white;
 
-  font-size: 13px;
+      &:hover {
+        background-color: #2c83fb;
+        border-color: #2c83fb;
+        color: white;
+      }
+    `}
 `;
 
 type Props = {
   text: string;
+  active: boolean;
+  onClick: () => void;
 };
 
-export default function ButtonLead({ text }: Props) {
-  return <Button>{text}</Button>;
+export default function ButtonLead({ text, active, onClick }: Props) {
+  return <Button active={active} onClick={onClick}>{text}</Button>;
 }

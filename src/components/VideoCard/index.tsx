@@ -48,12 +48,11 @@ const ImageWrapper = styled(Image)`
 `;
 
 type Props = {
-    onClick: Function;
-    title: String;
-}
+  onClick: Function;
+  title: String;
+};
 
 export default function VideoCard({ onClick, title }: Props) {
-
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -61,7 +60,7 @@ export default function VideoCard({ onClick, title }: Props) {
   };
 
   return (
-    <Container onClick={onClick ? handleClick : undefined} >
+    <Container onClick={onClick ? handleClick : undefined}>
       <ImgCont>
         <ImageWrapper src={thumbImg} alt="thumbLeadster" />
       </ImgCont>
