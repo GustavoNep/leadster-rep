@@ -1,7 +1,15 @@
 "use client";
 import React, { createContext, useState } from 'react';
 
-export const ButtonStateContext = createContext('');
+type ButtonState = {
+    activeButton: string;
+    setActiveButton: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const ButtonStateContext = createContext<ButtonState>({
+    activeButton: '',
+    setActiveButton: () => {},
+});
 
 export default function ButtonStateProvider({ children } : any) {
 

@@ -1,6 +1,10 @@
 import styled, { css } from "styled-components";
 
-const Button = styled.button`
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  active: boolean;
+}
+
+const Button = styled.button<ButtonProps>`
   background-color: white;
   margin-right: 10px;
   border: 1px solid black;
