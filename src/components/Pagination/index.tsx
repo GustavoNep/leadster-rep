@@ -5,6 +5,7 @@ const PageStyle = styled.div`
   justify-content: center;
   margin-top: 20px;
   padding-bottom: 20px;
+  user-select: none;
   span {
     display: flex;
     align-items: center;

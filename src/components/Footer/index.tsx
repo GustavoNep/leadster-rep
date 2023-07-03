@@ -65,11 +65,13 @@ const ListWrapper = styled.div`
 const LogoStyle = styled.div`
   display: flex;
   justify-content: center;
+  user-select: none;
 `;
 
 const LogoText = styled.div`
   display: flex;
   justify-content: center;
+  user-select: none;
   p {
     padding-top: 5px;
     font-size: 10px;

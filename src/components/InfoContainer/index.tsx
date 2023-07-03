@@ -6,6 +6,7 @@ import InfoButton from "../Buttons/InfoButton";
 import seloImg from "../../assets/selo.png";
 import cardImg from "../../assets/nocard.webp";
 import starImg from "../../assets/rating.webp";
+import Link from "next/link";
 
 const Container = styled.div`
   height: 70vh;
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
   display: flex;
   height: 100%;
   max-width: 84%;
+  
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 25px;
@@ -35,6 +37,7 @@ const Wrapper = styled.div`
 `;
 
 const ImgCont = styled.div`
+  user-select: none;
   @media (min-width: 678px) {
     flex: 1;
   }
@@ -50,8 +53,6 @@ const InfoCont = styled.div`
     padding-top: 8%;
   }
   @media (min-width: 1024px) {
-    
-    
   }
 `;
 const ImageCont = styled(Image)`
@@ -84,8 +85,7 @@ const LineLimit = styled.div`
   }
   @media (min-width: 1024px) {
     max-width: 85%;
-  } 
-  
+  }
 `;
 const ButtonDiv = styled.div`
   display: flex;
@@ -106,8 +106,7 @@ const ButtonDiv = styled.div`
     justify-content: flex-start;
     max-width: 85%;
     padding-top: 16px;
-  } 
-  
+  }
 `;
 
 const ImageSelo = styled(Image)`
@@ -116,10 +115,10 @@ const ImageSelo = styled(Image)`
   object-fit: contain;
   @media (min-width: 1024px) {
     width: 36%;
-  } 
+  }
   @media (min-width: 1200px) {
     width: 28%;
-  } 
+  }
 `;
 
 const CreditCont = styled.div`
@@ -143,14 +142,13 @@ const CreditCont = styled.div`
     padding-top: 20px;
     font-size: 0.65rem;
     padding-left: 4%;
-  } 
+  }
   @media (min-width: 1200px) {
     max-width: 92%;
     margin-top: 12px;
     font-size: 0.81rem;
     padding-left: 4%;
-    
-  } 
+  }
 `;
 
 const TitleCont = styled.div`
@@ -164,13 +162,11 @@ const TitleCont = styled.div`
 
   @media (min-width: 576px) {
     justify-content: center;
-
   }
   @media (min-width: 678px) {
     justify-content: flex-start;
     h2 {
       font-size: 2vw;
-      
     }
   }
   @media (min-width: 1024px) {
@@ -197,7 +193,6 @@ const DescCont = styled.div`
   }
 `;
 const TitleDesc = styled.div`
-
   max-width: 70%;
   margin: 0 auto;
   @media (min-width: 678px) {
@@ -233,7 +228,9 @@ export default function InfoContainer() {
             <AnnouLine mgtop="20px" mtbot="15px" />
           </LineLimit>
           <ButtonDiv>
-            <InfoButton text="VER DEMONSTRAÇÃO" />
+            <Link href="https://leadster.com.br/" target="_blank">
+              <InfoButton text="VER DEMONSTRAÇÃO" />
+            </Link>
             <ImageSelo src={seloImg} alt="/" />
           </ButtonDiv>
           <CreditCont>

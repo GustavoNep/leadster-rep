@@ -41,6 +41,7 @@ const ButtonRow = styled.div`
   flex-wrap: wrap;
   gap: 5px;
   padding-bottom: 15px;
+  user-select: none;
 
   @media (min-width: 576px) {
     justify-content: flex-start;
@@ -67,6 +68,7 @@ const WrapItems = styled.div`
 const OrderStyle = styled.div`
   display: flex;
   align-items: center;
+  user-select: none;
 `;
 const ModalWrapper = styled.div`
   position: fixed;

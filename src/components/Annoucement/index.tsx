@@ -4,6 +4,7 @@ import AnnouLine from "../AnnouLine";
 import Image from "next/image";
 import loadImg from "../../assets/asset-header.png";
 import { keyframes } from "styled-components";
+import Link from "next/link";
 
 const slideInAnimation = keyframes`
   from {
@@ -39,6 +40,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
+  user-select: none;
   animation: ${slideInAnimation} 0.5s ease-in-out;
 `;
 
@@ -163,7 +165,9 @@ export default function Annoucement() {
     <Container>
       <Wrapper>
         <AnouStyle>
-          <AnouButton text="WEBINARS EXCLUSIVOS" />
+          <Link href='https://leadster.com.br/' target="_blank">
+            <AnouButton text="WEBINARS EXCLUSIVOS" />
+          </Link>
         </AnouStyle>
         <AnouText>
           <h3>Menos Conversinha,</h3>

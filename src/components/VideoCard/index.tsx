@@ -27,6 +27,7 @@ const ImgCont = styled.div`
   height: 0;
   padding-bottom: 51%;
   position: relative;
+  user-select: none;
 `;
 const DescCont = styled.div`
   padding: 13px;

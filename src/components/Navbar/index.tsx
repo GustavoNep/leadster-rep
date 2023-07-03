@@ -12,6 +12,7 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div` 
+  user-select: none;
 `;
 
 const Logo = styled(Image)`
