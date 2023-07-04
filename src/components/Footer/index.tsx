@@ -4,6 +4,7 @@ import Logo from "../../../public/logo.png";
 import Image from "next/image";
 import ButtonSocial from "../Buttons/ButtonSocial";
 import AnnouLine from "../AnnouLine";
+import Link from "next/link";
 
 const Container = styled.div`
   width: 100%;
@@ -129,7 +130,6 @@ const CopyrightContainer = styled.div`
 
   @media (min-width: 1400px) {
     max-width: 1120px;
-    
   }
 `;
 
@@ -143,8 +143,36 @@ const LineLimit = styled.div`
   margin: 0 auto;
 `;
 
+const EmailLink = styled.a`
+  color: #568899;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+interface PhoneNumberLinkProps {
+  onClick: () => void;
+}
+
+const PhoneNumberLink = styled.a<PhoneNumberLinkProps>`
+  color: #568899;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export default function Footer() {
-  
+  const handleWhatsAppClick = (phoneNumber: string) => {
+    const formattedPhoneNumber = phoneNumber.replace(/\D/g, "");
+    const whatsappURL = `https://wa.me/${formattedPhoneNumber}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   const handleHomeClick = () => {
     window.scrollTo({
       top: 0,
@@ -183,10 +211,18 @@ export default function Footer() {
           <EmailConta>
             <ul>
               <li>
-                Email: <HighInfo>contato@leadster.com.br</HighInfo>{" "}
+                Email:{"  "}
+                <EmailLink href="mailto:gustaxv12@gmail.com">
+                  gustaxv12@gmail.com
+                </EmailLink>
               </li>
               <li>
-                Telefone: <HighInfo>(42)98828-9851</HighInfo>
+                Telefone:{"  "}
+                <PhoneNumberLink
+                  onClick={() => handleWhatsAppClick("(15) 62998585017")}
+                >
+                  +15 (62) 99858-5017
+                </PhoneNumberLink>
               </li>
             </ul>
           </EmailConta>

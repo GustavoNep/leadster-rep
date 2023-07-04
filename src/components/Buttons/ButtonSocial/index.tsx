@@ -12,7 +12,6 @@ const growAnimation = keyframes`
   }
 `;
 
-
 const ButtonSocialContainer = styled.div`
   display: flex;
   margin-left: 2px;
@@ -20,7 +19,7 @@ const ButtonSocialContainer = styled.div`
   padding-bottom: 6px;
 `;
 
-const SocialIcon = styled.div`
+const SocialIcon = styled.a`
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -45,13 +44,13 @@ const SocialIcon = styled.div`
 export default function ButtonSocial() {
   return (
     <ButtonSocialContainer>
-      <SocialIcon>
+      <SocialIcon href="https://www.linkedin.com/in/gustavo-nepomuceno-deusdara-4a26b7228/" target="_blank">
         <FaLinkedin />
       </SocialIcon>
-      <SocialIcon>
+      <SocialIcon href="https://www.facebook.com/leadsterplatform/?locale=pt_BR" target="_blank">
         <FaFacebook />
       </SocialIcon>
-      <SocialIcon>
+      <SocialIcon href="https://www.instagram.com/leadster.com.br/" target="_blank">
         <FaInstagram />
       </SocialIcon>
     </ButtonSocialContainer>
