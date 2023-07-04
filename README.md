@@ -7,12 +7,12 @@ O projeto era criar uma Landing usando Next Js e Styled components. Foi nos dado
 ## Como Organizei ?
 
 A principio tive que tratar os erros de compatibilidade do Styled Components com Next Js. 
-O Código foi organizado em algumas pastas principais como Components sendo a pasta que guarda todos components principais da minha página de landing. Também criei uma pasta chamada pages que utiliza as Rotas do proprio next pra navegar entre elas. Criei um component Layout para guardar minha navbar e footer caso seja necessária utilizar em outras páginas.
-Utilizei Typescript para fazer o código tipado e criei um arquivo de Types que descreve o tipo do objeto que seria os "Videos" listados, na outra pasta contants eu pude guardar esses objetos que estão sendo imprimidos dinâmicamente nos meus components de CardModel e VideoRow no código, caso mude algo nas constants mudará automaticamente nos componentes também.
+Para uma melhor organização e otimização do meu código resolvi trabalhar com a pasta App do Next js 13. Nesta pasta posso criar um arquivo page.tsx aonde seria a pagina principal da minha aplicação, criei algumas páginas dentro dela também que são as pastas ( agencia, chatbot, login, marketing e midia ) essas pastas guardam as rotas que eu utilizei na aplicação.Fiz o uso do react context para guardar estado globais dos meus botões que definem essas rotas. Também fiz uma páginação para cada rota além disso criei arquivos constants novos para cada página aberta por estes botões pasando como props esses Arrays no meu componente <VideoRow />.
+Utilizei Typescript para fazer o código tipado e criei um arquivo de Types que descreve o tipo do objeto que seria os "Videos" listados, na outra pasta contants eu pude guardar esses objetos que estão sendo imprimidos dinâmicamente nos meus components de CardModel,VideoRow e também em minhas páginas , caso mude algo nas constants mudará automaticamente nos componentes também.
 
 ## Como Rodar ? 
 
-Para rodar o projeto basta copiar estes arquivos para seu computador logo em seguida instalar as depências com `yarn install` e depois dar `yarn dev` para rodar o projeto.
+Para rodar o projeto basta copiar estes arquivos para seu computador logo em seguida instalar as depências com `yarn install` e depois `yarn dev` para rodar o projeto.
 Requisitos:
 - Node: v18.16.0
 - Yarn: 1.22.17
