@@ -89,7 +89,7 @@ const ITEMS_PER_PAGE = 9;
 type ChatProp = {
   pageVideo: Video[];
 }
-
+type OrderByOption = "nada" | "nomePesquisa" | "outroTipoDeOrdenacao";
 
 export default function VideosRow({pageVideo}: ChatProp) {
   
@@ -99,6 +99,12 @@ export default function VideosRow({pageVideo}: ChatProp) {
   const { activeButton, setActiveButton} = useContext(ButtonStateContext);
 
   const [currentPage, setCurrentPage] = useState(1);
+
+  const [orderBy, setOrderBy] = useState<OrderByOption>("nada");
+
+  const handleOrderByChange = (newOrderBy: OrderByOption) => {
+    setOrderBy(newOrderBy);
+  }
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -125,6 +131,15 @@ export default function VideosRow({pageVideo}: ChatProp) {
     setIsModalOpen(false);
   };
 
+  const orderedVideos = videosPerPage.sort((a,b) => {
+    if (orderBy === "nomePesquisa") {
+      return a.title.localeCompare(b.title);
+    }
+    else if ( orderBy === "outroTipoDeOrdenacao") {
+      return Math.random() - 0.5;
+    }
+    return 0;
+  })
 
   return (
     <Container>
@@ -147,14 +162,14 @@ export default function VideosRow({pageVideo}: ChatProp) {
           </Link>
         </ButtonRow>
         <OrderStyle>
-          <OrderButton />
+          <OrderButton orderBy={orderBy} onOrderByChange={handleOrderByChange}/>
         </OrderStyle>
       </WrapItems>
       <LineCont>
         <AnnouLine mgtop="15px" mtbot="30px" />
       </LineCont>
       <Wrapper>
-        {videosPerPage.map((video) => (
+        {orderedVideos.map((video) => (
           <VideoCard
             onClick={() => openModal({ video })}
             title={video.title}

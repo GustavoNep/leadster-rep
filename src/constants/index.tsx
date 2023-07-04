@@ -70,7 +70,7 @@ export const videos = [
   },{
     id: 3,
     videoId: "XIBdJjahUkM",
-    title: "Como aumentar sua Geração de Leads feat. Traktor",
+    title: "A olha como aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
@@ -91,7 +91,7 @@ export const videos = [
   },{
     id: 4,
     videoId: "XIBdJjahUkM",
-    title: "Como aumentar sua Geração de Leads feat. Traktor",
+    title: "Bem assim para aumentar sua Geração de Leads feat. Traktor",
     thumbnail: "url",
     description:
       "lorem ipsdum ior sit amet,lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet lorem ipsdum ior sit amet",
