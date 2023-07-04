@@ -86,7 +86,13 @@ const ModalWrapper = styled.div`
 
 const ITEMS_PER_PAGE = 9;
 
-export default function VideosRow() {
+type ChatProp = {
+  pageVideo: Video[];
+}
+
+
+export default function VideosRow({pageVideo}: ChatProp) {
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
@@ -98,10 +104,10 @@ export default function VideosRow() {
     setCurrentPage(pageNumber);
   };
 
-  const videosPerPage = videos.slice(
+  const videosPerPage = pageVideo ? pageVideo.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
-  );
+  ): [];
 
   const totalPages = Math.ceil(videos.length / ITEMS_PER_PAGE);
 
