@@ -4,14 +4,10 @@ import AnnouLine from "../AnnouLine";
 import Pagination from "../Pagination";
 import ButtonLead from "../Buttons/ButtonLead";
 import OrderButton from "../Buttons/OrderButton";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import VideoCardModal from "../VideoCardModal";
-import { videos } from "@/constants";
+import { videosApi } from "@/constants";
 import { Video } from "@/types/video";
-import Link from "next/link";
-import { useContext } from "react";
-import ButtonStateProvider, { ButtonStateContext } from '../../app/ButtonStateContext';
-
 
 const Container = styled.div`
   height: 100%;
@@ -86,17 +82,29 @@ const ModalWrapper = styled.div`
 
 const ITEMS_PER_PAGE = 9;
 
-type ChatProp = {
-  pageVideo: Video[];
-}
 type OrderByOption = "nada" | "nomePesquisa" | "outroTipoDeOrdenacao";
 
-export default function VideosRow({pageVideo}: ChatProp) {
-  
+type Jorge = {
+  id: number;
+  title: string;
+  description: string;
+  thumbnail: string;
+};
+
+export default function VideosRow() {
+  const [videoKeyword, setVideoKeyword] =
+    useState<keyof typeof videosApi>("leads");
+  const [pageVideos, setPageVideos] = useState<Video[]>(
+    videosApi[videoKeyword]
+  );
+
+  const changeVideoKeyword = (newVideoKeyword: keyof typeof videosApi) => {
+    setVideoKeyword(newVideoKeyword);
+    setPageVideos(videosApi[newVideoKeyword]);
+  };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
-
-  const { activeButton, setActiveButton} = useContext(ButtonStateContext);
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -104,18 +112,20 @@ export default function VideosRow({pageVideo}: ChatProp) {
 
   const handleOrderByChange = (newOrderBy: OrderByOption) => {
     setOrderBy(newOrderBy);
-  }
+  };
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
 
-  const videosPerPage = pageVideo ? pageVideo.slice(
-    (currentPage - 1) * ITEMS_PER_PAGE,
-    currentPage * ITEMS_PER_PAGE
-  ): [];
+  const videosPerPage = pageVideos
+    ? pageVideos.slice(
+        (currentPage - 1) * ITEMS_PER_PAGE,
+        currentPage * ITEMS_PER_PAGE
+      )
+    : [];
 
-  const totalPages = Math.ceil(videos.length / ITEMS_PER_PAGE);
+  const totalPages = Math.ceil(pageVideos.length / ITEMS_PER_PAGE);
 
   type Props = {
     video: Video;
@@ -131,38 +141,50 @@ export default function VideosRow({pageVideo}: ChatProp) {
     setIsModalOpen(false);
   };
 
-  const orderedVideos = videosPerPage.sort((a,b) => {
+  const orderedVideos = videosPerPage.sort((a, b) => {
     if (orderBy === "nomePesquisa") {
       return a.title.localeCompare(b.title);
-    }
-    else if ( orderBy === "outroTipoDeOrdenacao") {
+    } else if (orderBy === "outroTipoDeOrdenacao") {
       return Math.random() - 0.5;
     }
     return 0;
-  })
+  });
 
   return (
     <Container>
       <WrapItems>
         <ButtonRow>
-          <Link href='/agencia'>
-            <ButtonLead text="Agências" onClick={() => setActiveButton('agencia')} active={activeButton === 'agencia'}/>
-          </Link>
-          <Link href="/chatbot">
-            <ButtonLead text="Chatbot" onClick={() => setActiveButton('chatbot')} active={activeButton === 'chatbot'}/>
-          </Link>
-          <Link href='/marketing'>
-            <ButtonLead text="Marketing Digital" onClick={() => setActiveButton('marketing')} active={activeButton === 'marketing'}/>
-          </Link>
-          <Link href='/'>
-            <ButtonLead text="Geração de Leads" onClick={() => setActiveButton('Geração de Leads')} active={activeButton === 'Geração de Leads'}/>
-          </Link>
-          <Link href='/midia'>
-            <ButtonLead text="Mídia Page" onClick={() => setActiveButton('midia')} active={activeButton === 'midia'}/>
-          </Link>
+          <ButtonLead
+            text="Agências"
+            onClick={() => changeVideoKeyword("agency")}
+            active={videoKeyword === "agency"}
+          />
+          <ButtonLead
+            text="Chatbot"
+            onClick={() => changeVideoKeyword("chatbot")}
+            active={videoKeyword === "chatbot"}
+          />
+          <ButtonLead
+            text="Marketing Digital"
+            onClick={() => changeVideoKeyword("marketing")}
+            active={videoKeyword === "marketing"}
+          />
+          <ButtonLead
+            text="Geração de Leads"
+            onClick={() => changeVideoKeyword("leads")}
+            active={videoKeyword === "leads"}
+          />
+          <ButtonLead
+            text="Mídia Page"
+            onClick={() => changeVideoKeyword("midias")}
+            active={videoKeyword === "midias"}
+          />
         </ButtonRow>
         <OrderStyle>
-          <OrderButton orderBy={orderBy} onOrderByChange={handleOrderByChange}/>
+          <OrderButton
+            orderBy={orderBy}
+            onOrderByChange={handleOrderByChange}
+          />
         </OrderStyle>
       </WrapItems>
       <LineCont>
@@ -180,7 +202,7 @@ export default function VideosRow({pageVideo}: ChatProp) {
       <LineCont>
         <AnnouLine mgtop="30px" mtbot="0px" />
       </LineCont>
-      <Pagination 
+      <Pagination
         totalPages={totalPages}
         currentPage={currentPage}
         onPageChange={handlePageChange}

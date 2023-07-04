@@ -23,7 +23,7 @@ export const listItems = [
   },
 ];
 
-export const videos = [
+const videos = [
   {
     id: 1,
     videoId: "XIBdJjahUkM",
@@ -67,7 +67,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 3,
     videoId: "XIBdJjahUkM",
     title: "A olha como aumentar sua Geração de Leads feat. Traktor",
@@ -88,7 +89,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 4,
     videoId: "XIBdJjahUkM",
     title: "Bem assim para aumentar sua Geração de Leads feat. Traktor",
@@ -109,7 +111,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 5,
     videoId: "XIBdJjahUkM",
     title: "Como aumentar sua Geração de Leads feat. Traktor",
@@ -130,7 +133,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 6,
     videoId: "XIBdJjahUkM",
     title: "Como aumentar sua Geração de Leads feat. Traktor",
@@ -151,7 +155,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 7,
     videoId: "XIBdJjahUkM",
     title: "Como aumentar sua Geração de Leads feat. Traktor",
@@ -172,7 +177,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 8,
     videoId: "XIBdJjahUkM",
     title: "Como aumentar sua Geração de Leads feat. Traktor",
@@ -193,7 +199,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 9,
     videoId: "XIBdJjahUkM",
     title: "Como aumentar sua Geração de Leads feat. Traktor",
@@ -214,7 +221,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 10,
     videoId: "XIBdJjahUkM",
     title: "Como aumentar sua Geração de Leads feat. Traktor",
@@ -257,7 +265,8 @@ export const videos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 12,
     videoId: "XIBdJjahUkM",
     title: "Como aumentar sua Geração de Leads feat. Traktor",
@@ -301,11 +310,9 @@ export const videos = [
       },
     ],
   },
-  
 ];
 
-
-export const chatVideos = [
+const chatVideos = [
   {
     id: 1,
     videoId: "XIBdJjahUkM",
@@ -349,7 +356,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 3,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -370,7 +378,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 4,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -391,7 +400,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 5,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -412,7 +422,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 6,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -433,7 +444,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 7,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -454,7 +466,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 8,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -475,7 +488,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 9,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -496,7 +510,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 10,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -539,7 +554,8 @@ export const chatVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 12,
     videoId: "XIBdJjahUkM",
     title: "Como implementar um Chatbot Leadster",
@@ -583,10 +599,9 @@ export const chatVideos = [
       },
     ],
   },
-  
 ];
 
-export const markVideos = [
+const marketingVideos = [
   {
     id: 1,
     videoId: "XIBdJjahUkM",
@@ -630,7 +645,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 3,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -651,7 +667,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 4,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -672,7 +689,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 5,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -693,7 +711,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 6,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -714,7 +733,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 7,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -735,7 +755,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 8,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -756,7 +777,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 9,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -777,7 +799,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 10,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -820,7 +843,8 @@ export const markVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 12,
     videoId: "XIBdJjahUkM",
     title: "Como elaborar um marketing para sua empresa",
@@ -864,12 +888,9 @@ export const markVideos = [
       },
     ],
   },
-  
 ];
 
-
-
-export const agencyVideos = [
+const agencyVideos = [
   {
     id: 1,
     videoId: "XIBdJjahUkM",
@@ -913,7 +934,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 3,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -934,7 +956,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 4,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -955,7 +978,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 5,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -976,7 +1000,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 6,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -997,7 +1022,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 7,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -1018,7 +1044,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 8,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -1039,7 +1066,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 9,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -1060,7 +1088,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 10,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -1103,7 +1132,8 @@ export const agencyVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 12,
     videoId: "XIBdJjahUkM",
     title: "Conheça nossas agências na Leadster",
@@ -1147,12 +1177,9 @@ export const agencyVideos = [
       },
     ],
   },
-  
 ];
 
-
-
-export const midiasVideos = [
+const midiasVideos = [
   {
     id: 1,
     videoId: "XIBdJjahUkM",
@@ -1196,7 +1223,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 3,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1217,7 +1245,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 4,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1238,7 +1267,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 5,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1259,7 +1289,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 6,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1280,7 +1311,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 7,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1301,7 +1333,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 8,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1322,7 +1355,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 9,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1343,7 +1377,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 10,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1386,7 +1421,8 @@ export const midiasVideos = [
         downloadLink: "https://www.example.com/download/arquivo3.pdf",
       },
     ],
-  },{
+  },
+  {
     id: 12,
     videoId: "XIBdJjahUkM",
     title: "Como gerenciar suas midias sociais com a Leadster",
@@ -1430,17 +1466,12 @@ export const midiasVideos = [
       },
     ],
   },
-  
 ];
 
-
-
-
-
-
-
-
-
-
-
-
+export const videosApi = {
+  leads: videos,
+  chatbot: chatVideos,
+  marketing: marketingVideos,
+  agency: agencyVideos,
+  midias: midiasVideos,
+};
