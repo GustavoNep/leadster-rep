@@ -94,6 +94,7 @@ export default function VideosRow() {
   );
 
   const changeVideoKeyword = (newVideoKeyword: keyof typeof videosApi) => {
+    setCurrentPage(1);
     setVideoKeyword(newVideoKeyword);
     setPageVideos(videosApi[newVideoKeyword]);
   };
@@ -145,10 +146,6 @@ export default function VideosRow() {
     }
     return 0;
   });
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [videoKeyword])
 
   return (
     <Container>
