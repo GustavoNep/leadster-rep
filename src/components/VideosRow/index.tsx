@@ -4,7 +4,7 @@ import AnnouLine from "../AnnouLine";
 import Pagination from "../Pagination";
 import ButtonLead from "../Buttons/ButtonLead";
 import OrderButton from "../Buttons/OrderButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import VideoCardModal from "../VideoCardModal";
 import { videosApi } from "@/constants";
 import { Video } from "@/types/video";
@@ -84,16 +84,11 @@ const ITEMS_PER_PAGE = 9;
 
 type OrderByOption = "nada" | "nomePesquisa" | "outroTipoDeOrdenacao";
 
-type Jorge = {
-  id: number;
-  title: string;
-  description: string;
-  thumbnail: string;
-};
-
 export default function VideosRow() {
+
   const [videoKeyword, setVideoKeyword] =
     useState<keyof typeof videosApi>("leads");
+
   const [pageVideos, setPageVideos] = useState<Video[]>(
     videosApi[videoKeyword]
   );
@@ -104,6 +99,7 @@ export default function VideosRow() {
   };
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -149,6 +145,10 @@ export default function VideosRow() {
     }
     return 0;
   });
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [videoKeyword])
 
   return (
     <Container>
